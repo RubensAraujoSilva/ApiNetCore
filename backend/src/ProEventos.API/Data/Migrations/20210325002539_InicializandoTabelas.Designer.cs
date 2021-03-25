@@ -9,8 +9,8 @@ using ProEventos.API.Data;
 namespace ProEventos.API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210321210002_IniciadoTabelaEventos")]
-    partial class IniciadoTabelaEventos
+    [Migration("20210325002539_InicializandoTabelas")]
+    partial class InicializandoTabelas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

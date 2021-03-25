@@ -2,7 +2,7 @@
 
 namespace ProEventos.API.Data.Migrations
 {
-    public partial class IniciadoTabelaEventos : Migration
+    public partial class InicializandoTabelas : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
