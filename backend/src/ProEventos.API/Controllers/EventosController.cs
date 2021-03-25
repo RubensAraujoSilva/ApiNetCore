@@ -12,7 +12,7 @@ namespace ProEventos.API.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class EventoController : ControllerBase
+    public class EventosController : ControllerBase
     {
 
         [HttpGet]
@@ -35,7 +35,7 @@ namespace ProEventos.API.Controllers
         {
             var evento = await context.Eventos.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
             if(evento == null)
-                return NotFound(new { message = "Categoria não encontrada!"});
+                return NotFound(new { message = "Evento não encontrado!"});
 
             return Ok(evento);
         }
