@@ -29,12 +29,15 @@ namespace ProEventos.API
         {
 
             services.AddControllers();
+            services.AddDbContext<DataContext>(option => option.UseSqlServer(Configuration.GetConnectionString("Default")));
+            services.AddScoped<DataContext, DataContext>();
+
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEventos.API", Version = "v1" });
             });
-
-            services.AddDbContext<DataContext>(option => option.UseSqlServer(Configuration.GetConnectionString("Default")));
 
         }
 
